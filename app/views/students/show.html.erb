@@ -1,0 +1,4 @@
+<h1><%=@student.name%> of House <%=@student.house.name%>'s Timetable</h1>
+<hr>
+
+<li><%=@student.lessons.map{|o|o.lesson_name}%> lesson at <%=@student.lessons.map{|o|o.time}%> with <%=@student.lessons.map{|o|o.professor_id}%></li>

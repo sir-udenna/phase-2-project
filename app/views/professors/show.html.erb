@@ -1,0 +1,5 @@
+<h1><%=@professor.subject%> Instructor <%=@professor.name%>'s Timetable</h1>
+<hr>
+
+<li><%=@professor.lessons.map{|o|o.lesson_name}%> lesson at <%=@professor.lessons.map{|o|o.time}%> with <%=@professor.lessons.map{|o|o.student_id}%></li>
+
