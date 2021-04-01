@@ -1,4 +1,29 @@
 <h1><%=@student.name%> of House <%=@student.house.name%>'s Timetable</h1>
 <hr>
 
-<li><%=@student.lessons.map{|o|o.lesson_name}%> lesson at <%=@student.lessons.map{|o|o.time}%> with <%=@student.lessons.map{|o|o.professor_id}%></li>
+
+<%=%>
+
+
+
+
+
+
+
+
+
+<li><%=@student.lessons.map{|o|o.lesson_name}%> lesson on <%=@mydays.shuffle.first%>
+at <%=@student.lessons.map{|o|o.time}%> with <%=@student.lessons.map{|o|o.professor_id}%></li>
+
+# <%@lessons.each do |l|%>
+#     <li><%=l.lesson_name%></li>
+#     <%end%>
+
+
+
+So - this is each Students' show page -->
+
+What I want to do is display their lessons in a string // randomize the day of the week the lesson will take place on // Seed more lessons per Student // Ask Student if he/she wants to check out here Grade from her last lesson
+
+
+

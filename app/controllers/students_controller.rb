@@ -5,6 +5,8 @@ class StudentsController < ApplicationController
     
     def show
         @student = Student.find(params[:id])
+        @lessons = Lesson.all
+        @mydays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     end
 
     def new
