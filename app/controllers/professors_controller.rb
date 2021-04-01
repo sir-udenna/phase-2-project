@@ -21,4 +21,12 @@ class ProfessorsController < ApplicationController
         params.require("professor").permit(["name"], ["subject"])
     end
 
+    def edit
+        @professor = Professor.find(params[:id])
+    end
+
+    def update
+        byebug
+    end
+
 end
