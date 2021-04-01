@@ -1,29 +1,42 @@
 <h1><%=@student.name%> of House <%=@student.house.name%>'s Timetable</h1>
+
+<hr
+
+</h1><%=@student.name%>'s Timetable <%=Time.now%><h1>
 <hr>
 
+<%@student.lessons.each do |l|%>
+    <li><%=l.lesson_name%> lesson at <%=l.location%> - <%=l.time%>pm</li>
+    <%end%>
 
-<%=%>
+<hr>
 
+</h1><%=@student.name%>'s Semester Report Card<h1>
+<hr>
 
+<table>
+  <thead>
+    <tr>
+      <th>Grade</th>
+      <th>Subject</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
+  <tbody>
+  <%@student.grades.each do |g|%>
+    <tr>
+    <td><%=g.grade_achievement%></td>
+    </tr>
+  <% end %>
+<tbody>
+<%@student.lessons.each do |l|%>
+  <tr>
+  <td><%=l.lesson_name%></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
 
-
-
-
-
-
-<li><%=@student.lessons.map{|o|o.lesson_name}%> lesson on <%=@mydays.shuffle.first%>
-at <%=@student.lessons.map{|o|o.time}%> with <%=@student.lessons.map{|o|o.professor_id}%></li>
-
-# <%@lessons.each do |l|%>
-#     <li><%=l.lesson_name%></li>
-#     <%end%>
-
-
-
-So - this is each Students' show page -->
-
-What I want to do is display their lessons in a string // randomize the day of the week the lesson will take place on // Seed more lessons per Student // Ask Student if he/she wants to check out here Grade from her last lesson
-
-
+<%=button_to 'log out', '/logout', method: :delete%>
 

@@ -14,12 +14,15 @@ ActiveRecord::Schema.define(version: 2021_03_31_194202) do
 
   create_table "grades", force: :cascade do |t|
     t.string "grade_achievement"
+    t.integer "student_id"
+    t.integer "lesson_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "houses", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -27,8 +30,7 @@ ActiveRecord::Schema.define(version: 2021_03_31_194202) do
   create_table "lessons", force: :cascade do |t|
     t.string "lesson_name"
     t.string "location"
-    t.string "time"
-    t.integer "student_id"
+    t.integer "time"
     t.integer "professor_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

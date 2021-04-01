@@ -1,2 +1,2 @@
-class GradesController < ApplicationController
+class GradesController < ApplicationController 
 end

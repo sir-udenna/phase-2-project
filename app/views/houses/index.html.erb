@@ -2,5 +2,6 @@
 <hr>
 
 <%@houses.each do |h|%>
-    <strong><li><%=h.name%></li></strong>
+    <strong><li><%= link_to h.name, h %></li></strong>
+    <img src="<%=h.img_url%>">
 <%end%>
