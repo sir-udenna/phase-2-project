@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    font-family:helvetica;
+    background-color: #090909;
+    color: #c1e1ec;
+}
+
+.container {
+    width:70%;
+    margin:auto;
+}
+
+.student-info {
+    display:flex;
+    justify-content:space-around;
+}
+
+

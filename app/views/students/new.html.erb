@@ -1,8 +1,17 @@
 <h1>Hogwarts Admittance Letter - Welcome to the Magical World of Wizardary</h1>
 <hr>
+
+
+<%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkp-0_H793GnoFZFKUbTdOxDLnfSH2tnaZFw&usqp=CAU" %>
+
+
 <%=form_with model:@student do |f|%>
-    <%=f.label :name%>
-    <%=f.text_field :name%>
-    <%=f.collection_select :house_id, House.all, :id, :name%>
+    <%=f.label :name%><br><br>
+    <%=f.text_field :name%><br><br>
+    <%=f.label :password%><br><br>
+    <%=f.password_field :password%><br><br>
+    <%=f.label :password_confirmation%><br><br>
+    <%=f.password_field :password_confirmation%><br><br>
+    <%=f.collection_select :house_id, House.all, :id, :name%><br><br>
     <%=f.submit%>
     <%end%>

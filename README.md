@@ -50,3 +50,40 @@ Professor
 <!-- changes - removal of student_id -->
 # changes - time set to integer
 # changes - lesson assocation change from 2 belongs_to
+
+
+What I want to do is display their lessons in a string // randomize the day of the week the lesson will take place on // Seed more lessons per Student // Ask Student if he/she wants to check out here Grade from her last lesson
+
+
+
+<li><%=@student.lessons.map{|o|o.lesson_name}%> lesson on <%=@mydays.shuffle.first%>
+at <%=@student.lessons.map{|o|o.time}%> with <%=@student.lessons.map{|o|o.professor_id}%></li>
+
+# <%@lessons.each do |l|%>
+#     <li><%=l.lesson_name%></li>
+#     <%end%>
+
+
+
+has_many :lessons
+    has_many :students, through: :lessons
+
+
+
+
+
+
+    <li><%=@student.lessons.map{|o|o.lesson_name}%> lesson on <%=@mydays.shuffle.first%>
+at <%=@student.lessons.map{|o|o.time}%> with <%=@student.lessons.map{|o|o.professor_id}%></li>
+
+# <%@lessons.each do |l|%>
+#     <li><%=l.lesson_name%></li>
+#     <%end%>
+
+
+
+So - this is each Students' show page -->
+
+What I want to do is display their lessons in a string // randomize the day of the week the lesson will take place on // Seed more lessons per Student // Ask Student if he/she wants to check out here Grade from her last lesson
+
+
