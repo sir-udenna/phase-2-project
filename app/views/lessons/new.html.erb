@@ -7,8 +7,7 @@
     <%end%>
 
     <hr>
-
-<%=form_with model:@lessons do |f|%>
+<%=form_with model:@lesson do |f|%>
     <%=f.label :lesson_name%>
     <%=f.text_field :lesson_name%>
     <%=f.collection_select :professor_id, Professor.all, :id, :name%>

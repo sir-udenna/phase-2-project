@@ -14,6 +14,7 @@ class ProfessorsController < ApplicationController
 
     def create
         @professor = Professor.create(professor_params)
+        @professor.save
         redirect_to professors_path(@professors)
     end
 
